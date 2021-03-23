@@ -31,6 +31,7 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupTipo = new javax.swing.ButtonGroup();
         jLabelForm = new javax.swing.JLabel();
         jTextFieldCod = new javax.swing.JTextField();
         jTextFieldUbi = new javax.swing.JTextField();
@@ -40,6 +41,14 @@ public class Inicio extends javax.swing.JFrame {
         jButtonVerEquipos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaEquipos = new javax.swing.JTextArea();
+        jLabelTipoEquipo = new javax.swing.JLabel();
+        jTextFieldSSOO = new javax.swing.JTextField();
+        jTextFieldTipoImpresora = new javax.swing.JTextField();
+        jTextFieldAñoCompra = new javax.swing.JTextField();
+        jTextFieldTipo = new javax.swing.JTextField();
+        jRadioButtonImpresora = new javax.swing.JRadioButton();
+        jRadioButtonServidor = new javax.swing.JRadioButton();
+        jRadioButtonPC = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,6 +93,11 @@ public class Inicio extends javax.swing.JFrame {
                 jTextFieldcosteFocusLost(evt);
             }
         });
+        jTextFieldcoste.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldcosteActionPerformed(evt);
+            }
+        });
 
         jCheckBoxProtegido.setText("Protegido");
 
@@ -106,51 +120,140 @@ public class Inicio extends javax.swing.JFrame {
         jTextAreaEquipos.setRows(5);
         jScrollPane1.setViewportView(jTextAreaEquipos);
 
+        jLabelTipoEquipo.setText("Selecciona un tipo de equipo");
+
+        jTextFieldSSOO.setText("SSOO");
+        jTextFieldSSOO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSSOOActionPerformed(evt);
+            }
+        });
+
+        jTextFieldTipoImpresora.setText("Tipo Impresora");
+
+        jTextFieldAñoCompra.setText("Año Compra");
+
+        jTextFieldTipo.setText("Tipo");
+        jTextFieldTipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTipoActionPerformed(evt);
+            }
+        });
+
+        buttonGroupTipo.add(jRadioButtonImpresora);
+        jRadioButtonImpresora.setText("Impresora");
+        jRadioButtonImpresora.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButtonImpresoraMouseClicked(evt);
+            }
+        });
+
+        buttonGroupTipo.add(jRadioButtonServidor);
+        jRadioButtonServidor.setText("Servidor");
+        jRadioButtonServidor.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButtonServidorMouseClicked(evt);
+            }
+        });
+
+        buttonGroupTipo.add(jRadioButtonPC);
+        jRadioButtonPC.setText("PC");
+        jRadioButtonPC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButtonPCMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBoxProtegido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextFieldcoste)
-                    .addComponent(jTextFieldUbi)
-                    .addComponent(jLabelForm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextFieldCod)
-                    .addComponent(jButtonAñadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButtonVerEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(112, 112, 112))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(82, 82, 82)
+                                .addComponent(jButtonAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jCheckBoxProtegido, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldTipo))
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldAñoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextFieldcoste, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldTipoImpresora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldUbi, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelForm, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jRadioButtonImpresora)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jRadioButtonPC, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldSSOO, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabelTipoEquipo)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jRadioButtonServidor, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonVerEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(114, 114, 114))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTipoEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelForm, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelForm, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonVerEquipos))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(0, 43, Short.MAX_VALUE)
                         .addComponent(jTextFieldCod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jTextFieldUbi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldcoste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldcoste, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldTipoImpresora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jCheckBoxProtegido, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonAñadir)))
-                .addContainerGap(45, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldAñoCompra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addComponent(jButtonAñadir)
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonImpresora)
+                            .addComponent(jRadioButtonPC))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jRadioButtonServidor)
+                            .addComponent(jButtonVerEquipos))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldSSOO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))))
         );
 
         pack();
@@ -229,6 +332,52 @@ public class Inicio extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextFieldcosteFocusLost
 
+    private void jTextFieldTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTipoActionPerformed
+
+    private void jTextFieldSSOOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSSOOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSSOOActionPerformed
+
+    private void jTextFieldcosteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldcosteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldcosteActionPerformed
+
+    private void jRadioButtonPCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonPCMouseClicked
+        // TODO add your handling code here:
+        
+        jTextFieldTipoImpresora.setVisible(false);
+        jTextFieldAñoCompra.setVisible(false);
+        
+        jTextFieldSSOO.setVisible(true);
+         jTextFieldTipo.setVisible(true);
+        
+    }//GEN-LAST:event_jRadioButtonPCMouseClicked
+
+    private void jRadioButtonImpresoraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonImpresoraMouseClicked
+        // TODO add your handling code here:
+        
+        jTextFieldSSOO.setVisible(false);
+        jTextFieldAñoCompra.setVisible(false);
+        jTextFieldTipo.setVisible(false);
+        
+        jTextFieldTipoImpresora.setVisible(true);
+        jTextFieldAñoCompra.setVisible(true);
+        
+    }//GEN-LAST:event_jRadioButtonImpresoraMouseClicked
+
+    private void jRadioButtonServidorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButtonServidorMouseClicked
+        // TODO add your handling code here:
+        
+        jTextFieldTipo.setVisible(false);
+        jTextFieldTipoImpresora.setVisible(false);
+        
+        jTextFieldSSOO.setVisible(true);
+        jTextFieldAñoCompra.setVisible(true);
+        
+    }//GEN-LAST:event_jRadioButtonServidorMouseClicked
+
     
     
     /**
@@ -268,13 +417,22 @@ public class Inicio extends javax.swing.JFrame {
 
     private ArrayList<Equipo> vEquipos;
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupTipo;
     private javax.swing.JButton jButtonAñadir;
     private javax.swing.JButton jButtonVerEquipos;
     private javax.swing.JCheckBox jCheckBoxProtegido;
     private javax.swing.JLabel jLabelForm;
+    private javax.swing.JLabel jLabelTipoEquipo;
+    private javax.swing.JRadioButton jRadioButtonImpresora;
+    private javax.swing.JRadioButton jRadioButtonPC;
+    private javax.swing.JRadioButton jRadioButtonServidor;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextAreaEquipos;
+    private javax.swing.JTextField jTextFieldAñoCompra;
     private javax.swing.JTextField jTextFieldCod;
+    private javax.swing.JTextField jTextFieldSSOO;
+    private javax.swing.JTextField jTextFieldTipo;
+    private javax.swing.JTextField jTextFieldTipoImpresora;
     private javax.swing.JTextField jTextFieldUbi;
     private javax.swing.JTextField jTextFieldcoste;
     // End of variables declaration//GEN-END:variables

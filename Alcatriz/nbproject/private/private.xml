@@ -3,11 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/alumno/NetBeansProjects/Alcatriz/src/Herencia/Servidor.java</file>
-            <file>file:/home/alumno/NetBeansProjects/Alcatriz/src/Herencia/PC.java</file>
-            <file>file:/home/alumno/NetBeansProjects/Alcatriz/src/Herencia/Impresora.java</file>
-            <file>file:/home/alumno/NetBeansProjects/Alcatriz/src/Ventanas/Inicio.java</file>
-            <file>file:/home/alumno/NetBeansProjects/Alcatriz/src/Herencia/Equipo.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/Herencia/Impresora.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/Herencia/Servidor.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/Ventanas/Inicio.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/IODatos/IODatos.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/Herencia/Equipo.java</file>
+            <file>file:/home/alumno/NetBeansProjects/InterfazGrafica/Alcatriz/src/Herencia/PC.java</file>
         </group>
     </open-files>
 </project-private>
